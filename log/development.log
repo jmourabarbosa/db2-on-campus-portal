@@ -5064,3 +5064,49 @@ ActionController::RoutingError (No route matches "/pics/page_bg.gif" with {:meth
     script/server:3
 
 Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-04 22:28:28) [GET]
+  Session ID: 991cea21f1d5c88c1341438bcbeb339c
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-04 22:28:29) [GET]
+  Session ID: 991cea21f1d5c88c1341438bcbeb339c
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+RuntimeError (Failed to connect to the [PORTALDB] due to: [IBM][CLI Driver] SQL1031N  The database directory cannot be found on the indicated file system.  SQLSTATE=58031 SQLCODE=-1031):
+    /usr/lib/ruby/gems/1.8/gems/ibm_db-1.0.0/lib/active_record/connection_adapters/ibm_db_adapter.rb:176:in `ibm_db_connection'
+    /home/geko/.gem/ruby/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/connection_specification.rb:292:in `send'
+    /home/geko/.gem/ruby/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/connection_specification.rb:292:in `connection='
+    /home/geko/.gem/ruby/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/connection_specification.rb:260:in `retrieve_connection'
+    /home/geko/.gem/ruby/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /home/geko/.gem/ruby/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:103:in `process_request'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:153:in `with_signal_handler'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:101:in `process_request'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:78:in `process_each_request'
+    /usr/lib/ruby/1.8/fcgi.rb:612:in `each_cgi'
+    /usr/lib/ruby/1.8/fcgi.rb:609:in `each'
+    /usr/lib/ruby/1.8/fcgi.rb:609:in `each_cgi'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:77:in `process_each_request'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:76:in `catch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:76:in `process_each_request'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:50:in `process!'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/fcgi_handler.rb:24:in `process!'
+    /public/dispatch.fcgi:24
+
+Rendering /home/geko/.gem/ruby/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
