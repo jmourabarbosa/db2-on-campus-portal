@@ -1,0 +1,39 @@
+<h1>New user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, :size => 40 %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, :size => 40 %>
+  </p>
+  <p>
+    <label for="user_password">Password:</label>
+    <%= f.password_field :password, :size => 40 %>
+  </p>
+  <p>
+    <label for="user_password_confirmation">Confirm:</label>
+    <%= f.password_field :password_confirmation, :size => 40 %>
+  </p>
+  <p>
+    <%= f.label :type_user %><br />
+    <%= select ("user", "type_user", [["Student", "student"], ["Professional", "professional"], ["Faculty Member","faculty"]], {:include_blank => false} ) %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>  
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', users_path %>
