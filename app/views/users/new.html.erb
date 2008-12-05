@@ -29,7 +29,7 @@
   </p>
   <p>
     <%= f.label :country %><br />
-    <%= f.text_field :country %>
+    <%= select("user", "country", Country.find(:all).collect {|p| [ p.name, p.name ] }, {:include_blank => false}) %>
   </p>  
   <p>
     <%= f.submit "Create" %>
